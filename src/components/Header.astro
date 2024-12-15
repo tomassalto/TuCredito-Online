@@ -1,0 +1,46 @@
+---
+const currentPath = Astro.url.pathname;
+const isBlogActive = currentPath.startsWith("/blog");
+const isHelpActive = currentPath === "/ayuda";
+---
+
+<section
+  class={`${currentPath === "/" ? "" : "bg-violet"} py-10 flex items-center justify-center`}
+>
+  <div
+    class="w-[288px] xs:w-[358px] sm:w-[577px] lg:w-[824px] xl:w-[980px] mac:w-[1040px] hd:w-[1036px] fullhd:w-[1120px] 2k:w-[1210px] 4k:w-[1675px]"
+  >
+    <div
+      class="flex flex-col sm:flex-row items-center justify-between 2k:justify-between 2k:gap-0 gap-5"
+    >
+      <div
+        class="flex flex-col items-center justify-center font-montserrat font-bold z-20 sm:pb-0"
+      >
+        <a href={`${currentPath === "/" ? "#" : "/"}`}>
+          <p
+            class={` ${currentPath === "/" ? "text-violet" : "text-white"} text-2xl w-full`}
+          >
+            Tu Crédito - Online
+          </p>
+          <p class="text-lg text-sky_blue tracking-[8.10px]">ONLINE</p>
+        </a>
+      </div>
+      <div
+        class={`flex gap-[40px] mx-auto text-base ${currentPath === "/" ? "text-dark" : "text-white"} font-medium sm:mx-0 sm:gap-[59px]`}
+      >
+        <a
+          href="/ayuda"
+          class={` ${isHelpActive ? "font-bold" : ""} ${currentPath === "/" ? " hover:text-violet" : "hover:text-sky_blue"}`}
+        >
+          Ayuda
+        </a>
+        <a
+          href="/blog"
+          class={` ${isBlogActive ? "font-bold" : ""} ${currentPath === "/" ? " hover:text-violet" : "hover:text-sky_blue"}`}
+        >
+          Blog
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

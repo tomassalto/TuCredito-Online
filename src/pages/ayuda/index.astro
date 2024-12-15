@@ -1,0 +1,9 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Faq from "../../components/Faq/Faq.jsx"
+import faq from "../../data/faq.json"
+---
+
+<Layout title="Ayuda">
+    <Faq faq={faq} client:visible />
+</Layout>

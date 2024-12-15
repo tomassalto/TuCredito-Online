@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import { why_choose_us } from "../data/why_choose_us.json";
+import CardWhyChooseUs from "./CardWhyChooseUs.astro";
+import Button from "./Button";
+---
+
+<section>
+  <div class="flex flex-col items-center justify-center w-full">
+    <div
+      class="py-[120px] px-2 xs:px-0 gap-[60px] flex flex-col justify-center items-center xs:w-[311px] sm:w-[577px] lg:px-0 lg:w-[824px] xl:w-[980px] mac:w-[1040px] hd:w-[1036px] fullhd:w-[1120px] 2k:w-[1600px] 4k:w-[3000px]"
+    >
+      <div
+        class="text-violet font-bold font-montserrat text-[32px] text-center"
+      >
+        ¿Por qué elegir Tu Crédito?
+      </div>
+      <div
+        class="flex w-full items-center justify-center 2k:justify-evenly 4k:gap-60"
+      >
+        <div class="hidden lg:flex hd:justify-center">
+          <Image
+            src="/images/why-choose-us/why-choose-us.png"
+            alt="why choose us"
+            width={350}
+            height={400}
+            class="h-[400px] xl:w-[320px] xl:h-[450px] mac:h-[500px] fullhd:w-[330px]"
+          />
+        </div>
+        <div
+          class="grid grid-cols-1 gap-y-[75px] lg:gap-y-[60px] lg:gap-x-[20px] xl:gap-[60px] lg:flex lg:flex-wrap lg:w-[669px] mac:gap-y-[120px] mac:gap-x-[90px] lg:h-full lg:justify-end"
+        >
+          {
+            why_choose_us.map((item) => (
+              <CardWhyChooseUs
+                icon={item.icon}
+                title={item.title}
+                description={item.description}
+                bold={item.bold}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-violet py-[60px] flex justify-center items-center">
+    <div
+      class="gap-y-[30px] lg:h-[82px] xl:h-[84px] mac:h-[89px] xs:px-0 flex flex-col items-center lg:flex-row w-[311px] sm:w-[577px] lg:w-[824px] xl:w-[980px] mac:w-[1040px] hd:w-[1036px] fullhd:w-[1120px] lg:gap-0 lg:justify-between 2k:w-[1660px] 2k:justify-evenly 4k:w-[3000px]"
+    >
+      <div
+        class="text-white flex w-full h-full text-[32px] font-medium leading-[40px] lg:items-center lg:text-[20px] lg:leading-normal xl:leading-[40px] lg:w-[500px] xl:text-[28px] xl:w-[650px]"
+      >
+        <p>
+          ¿Qué estás esperando?<span class="font-bold w-full">
+            Sacá tu préstamo en simples pasos y hacé realidad tus proyectos</span
+          >
+        </p>
+      </div>
+
+      <div
+        class="flex items-center md:justify-center w-full h-[89px] lg:w-[260px] lg:h-[82px] xl:w-[290px] mac:h-[89px] hd:w-[310px]"
+      >
+        <a href="#prestamo" class="w-full h-full">
+          <Button
+            text="PEDÍ TU PRÉSTAMO"
+            color="primary"
+            padding="xl-sm"
+            textSize="text-xl lg:text-[18px] xl:text-2xl font-bold"
+            btn_disabled={false}
+            client:visible
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

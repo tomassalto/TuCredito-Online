@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Form from "../components/Form.jsx";
+import WhyChooseUs from "../components/WhyChooseUs.astro";
+import OurBlog from "../components/OurBlog.jsx";
+---
+
+<Layout title="Tu Crédito Online">
+  <Hero />
+  <Form client:load />
+  <WhyChooseUs />
+  <OurBlog client:visible />
+</Layout>

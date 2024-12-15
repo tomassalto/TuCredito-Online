@@ -1,0 +1,28 @@
+{
+  "why_choose_us": [
+    {
+      "icon": "/icons/why-choose-us/thunder.svg",
+      "title": "Es Rápido",
+      "description": "Sin papeles.",
+      "bold": "Sin vueltas."
+    },
+    {
+      "icon": "/icons/why-choose-us/check.svg",
+      "title": "Es seguro",
+      "description": "Tus datos son personales y están",
+      "bold": "100% protegidos."
+    },
+    {
+      "icon": "/icons/why-choose-us/online.svg",
+      "title": "Es 100% Online",
+      "description": "Pedilo",
+      "bold": "desde donde quieras."
+    },
+    {
+      "icon": "/icons/why-choose-us/money.svg",
+      "title": "¡Es gratis!",
+      "description": "Recomendarte las mejores opciones",
+      "bold": "no tiene costo."
+    }
+  ]
+}

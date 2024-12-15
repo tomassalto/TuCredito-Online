@@ -1,0 +1,9 @@
+{
+  "featured_card": {
+    "id": "4",
+    "image": "/images/blog/featured.jpeg",
+    "title": "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.",
+    "date": "Lunes 22 de Julio de 2024",
+    "description": "This is a description of the featured blog post."
+  }
+}

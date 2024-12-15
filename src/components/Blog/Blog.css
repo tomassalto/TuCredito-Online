@@ -1,0 +1,22 @@
+@media (min-width: 320px) and (max-width: 639px) {
+  .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden,
+  .swiper-wrapper,
+  .swiper-slide.swiper-slide-active,
+  .swiper-slide.swiper-slide-next,
+  .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden,
+  .swiper-wrapper,
+  .swiper-slide {
+    width: 300px;
+  }
+}
+@media (min-width: 640px) and (max-width: 3840px) {
+  .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden,
+  .swiper-wrapper,
+  .swiper-slide.swiper-slide-active,
+  .swiper-slide.swiper-slide-next,
+  .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden,
+  .swiper-wrapper,
+  .swiper-slide {
+    width: 100%;
+  }
+}
